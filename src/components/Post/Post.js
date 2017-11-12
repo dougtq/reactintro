@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Comentario from '../Comentario/Comentario'
+import Moment from 'moment'
+import './Post.css'
 
 class Post extends Component {
   constructor (props) {
@@ -7,11 +9,13 @@ class Post extends Component {
     this.state = {
       comments: [
         {
-          text: ''
+          text: '',
+          time: ''
         }
       ],
       newComment: ''
     }
+
     this.render = this.render.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleNewComment = this.handleNewComment.bind(this)
@@ -21,7 +25,7 @@ class Post extends Component {
     this.setState({
       comments: [
         ...this.state.comments,
-        { text: this.state.newComment }
+        { text: this.state.newComment, time: this.state.newTime }
       ]
     })
 
@@ -29,8 +33,15 @@ class Post extends Component {
     e.preventDefault()
   }
 
+  getCommentTime () {
+    let now = Moment().format()
+    now = now.split('T')
+    now = now[1].split('-')
+    return now[0]
+  }
+
   handleNewComment (e) {
-    this.setState({ newComment: e.target.value })
+    this.setState({ newComment: e.target.value, newTime: this.getCommentTime() })
   }
 
   render () {
@@ -45,7 +56,7 @@ class Post extends Component {
           <button type='submit'> Comentar </button>
         </form>
         {this.state.comments.map((data, index) => (
-          <Comentario key={index} text={data.text} />
+          <Comentario key={index} text={data.text} time={data.time} />
         ))}
       </div>
     )
