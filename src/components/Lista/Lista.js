@@ -8,28 +8,23 @@ class Lista extends Component {
       posts: [
         {
           id: 1,
-          title: 'Aprendendo React',
-          disabled: true
+          title: 'Aprendendo React'
         },
         {
           id: 2,
-          title: 'A RocketSeat é massa!',
-          disabled: false
+          title: 'A RocketSeat é massa!'
         },
         {
           id: 3,
-          title: 'ReactIntro is Awesome!',
-          disabled: false
+          title: 'ReactIntro is Awesome!'
         },
         {
           id: 4,
-          title: 'Medium é massa!',
-          disabled: false
+          title: 'Medium é massa!'
         },
         {
           id: 5,
-          title: 'Acabou minha criatividade!',
-          disabled: false
+          title: 'Acabou minha criatividade!'
         }
       ]
     }
@@ -38,9 +33,10 @@ class Lista extends Component {
       this.setState({
         posts: [
           ...this.state.posts,
-          { id: 6, title: 'Novo post no fim da lista', disabled: false },
-          { id: 7, title: 'Novo post no fim da lista', disabled: false },
-          { id: 8, title: 'Novo post no fim da lista', disabled: false }
+          {
+            id: 6,
+            title: 'Novo post no fim da lista'
+          }
         ]
       })
     }, 3000)
@@ -50,9 +46,9 @@ class Lista extends Component {
   render () {
     return (
       <div>
-        {this.state.posts.map(post => (
+        {this.state.posts.map(post =>
           <Post key={post.id} title={post.title} />
-        ))}
+        )}
       </div>
     )
   }
