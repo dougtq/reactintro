@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Post from '../post/Post'
+import Post from '../Post/Post'
 
 class Lista extends Component {
   constructor (props) {
@@ -8,23 +8,28 @@ class Lista extends Component {
       posts: [
         {
           id: 1,
-          title: 'Aprendendo React'
+          title: 'Aprendendo React',
+          disabled: true
         },
         {
           id: 2,
-          title: 'A RocketSeat é massa!'
+          title: 'A RocketSeat é massa!',
+          disabled: false
         },
         {
           id: 3,
-          title: 'ReactIntro is Awesome!'
+          title: 'ReactIntro is Awesome!',
+          disabled: false
         },
         {
           id: 4,
-          title: 'Medium é massa!'
+          title: 'Medium é massa!',
+          disabled: false
         },
         {
           id: 5,
-          title: 'Acabou minha criatividade!'
+          title: 'Acabou minha criatividade!',
+          disabled: false
         }
       ]
     }
@@ -33,7 +38,9 @@ class Lista extends Component {
       this.setState({
         posts: [
           ...this.state.posts,
-          { id: 6, title: 'Novo post no fim da lista' }
+          { id: 6, title: 'Novo post no fim da lista', disabled: false },
+          { id: 7, title: 'Novo post no fim da lista', disabled: false },
+          { id: 8, title: 'Novo post no fim da lista', disabled: false }
         ]
       })
     }, 3000)

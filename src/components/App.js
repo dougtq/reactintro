@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import Div from '../div/Div'
+import Lista from './Lista/Lista'
 import logo from '../assets/logo.svg'
 import './App.css'
 
@@ -13,12 +12,9 @@ class App extends Component {
           <h1 className='App-title'>Bem Vindo ao ReactIntro</h1>
           <hr />
         </header>
+        <Lista />
       </div>
     )
-  }
-
-  renderDiv () {
-    ReactDOM.render(<Div />, document.getElementById('root'))
   }
 }
 
