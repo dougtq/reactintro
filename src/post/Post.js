@@ -7,7 +7,7 @@ class Post extends Component {
   }
 
   render () {
-    return <h1>{this.props.title}</h1>
+    return <h3>{this.props.title}</h3>
   }
 }
 
