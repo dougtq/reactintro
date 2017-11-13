@@ -4,8 +4,9 @@ import './Comentario.css'
 class Comentario extends Component {
   render () {
     return (
-      <div>
-        <p>{ this.props.text } { (this.props.time) ? 'às' : '' } { this.props.time } </p>
+      <div className='comment' align='center'>
+        <p> <strong>{ this.props.text } { (this.props.time) ? ' às' : '' } { this.props.time } </strong> </p>
+        <p className='time' />
       </div>
     )
   }

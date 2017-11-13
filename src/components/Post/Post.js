@@ -46,14 +46,14 @@ class Post extends Component {
 
   render () {
     return (
-      <div class='post'>
-        <h3>{this.props.title}</h3>
+      <div className='post'>
+        <span class='post-title'>{this.props.title}</span>
         <form onSubmit={this.handleSubmit}>
           <input
             value={this.state.newComment}
             onChange={this.handleNewComment}
           />
-          <button type='submit'> Comentar </button>
+          <button className='btn btn-success' type='submit'> Comentar </button>
         </form>
         {this.state.comments.map((data, index) => (
           <Comentario key={index} text={data.text} time={data.time} />

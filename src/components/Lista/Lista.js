@@ -8,23 +8,11 @@ class Lista extends Component {
       posts: [
         {
           id: 1,
-          title: 'Aprendendo React'
+          title: 'RocketSeat é massa!'
         },
         {
           id: 2,
-          title: 'A RocketSeat é massa!'
-        },
-        {
-          id: 3,
-          title: 'ReactIntro is Awesome!'
-        },
-        {
-          id: 4,
-          title: 'Medium é massa!'
-        },
-        {
-          id: 5,
-          title: 'Acabou minha criatividade!'
+          title: 'ReactIntro tbm é massa!'
         }
       ]
     }
@@ -34,8 +22,8 @@ class Lista extends Component {
         posts: [
           ...this.state.posts,
           {
-            id: 6,
-            title: 'Novo post no fim da lista'
+            id: 3,
+            title: 'Medium é 10/10'
           }
         ]
       })
@@ -45,7 +33,7 @@ class Lista extends Component {
   }
   render () {
     return (
-      <div>
+      <div className='list'>
         {this.state.posts.map(post =>
           <Post key={post.id} title={post.title} />
         )}
