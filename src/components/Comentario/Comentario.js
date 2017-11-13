@@ -5,7 +5,7 @@ class Comentario extends Component {
   render () {
     return (
       <div className='comment' align='center'>
-        <p> <strong>{ this.props.text } { (this.props.time) ? ' às' : '' } { this.props.time } </strong> </p>
+        <p> { (this.props.time) ? 'Comentário: ' : '' } <strong>{ this.props.text } </strong> { (this.props.time) ? ' às' : '' } { this.props.time } </p>
         <p className='time' />
       </div>
     )
