@@ -1,3 +1,13 @@
+.time {
+  color: red;
+}
+
 .comment {
+  border-top: 2px;
+  border-bottom: 2px;
+  border-color: black;
+  border-style: solid;
+  border-width: thin;
+  margin-bottom: 20px;
   background-color: inherit;
 }
