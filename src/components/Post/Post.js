@@ -34,8 +34,7 @@ class Post extends Component {
   }
 
   getCommentTime () {
-    let now = Moment().format()
-    now = now.split('T')
+    let now = Moment().format().split('T')
     now = now[1].split('-')
     return now[0]
   }
